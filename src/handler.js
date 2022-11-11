@@ -94,7 +94,7 @@ const getAllBooksHandler = (request, h) => {
   }
 
   if (finished !== undefined) {
-    filteredBooks = filteredBooks.filter((book) => book.reading === !!Number(finished));
+    filteredBooks = filteredBooks.filter((book) => book.finished === !!Number(finished));
   }
 
   const response = h.response({
